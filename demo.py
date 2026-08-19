@@ -1,4 +1,5 @@
 import random
+import matplotlib.pyplot as plt
 
 def birthday_problem(n):
     birthdays = []
@@ -27,5 +28,13 @@ for i in range(trials):
 
 probability = matches / trials
 
-print("Probability of at least two people having the same birthday:",
-      probability)
+print("Probability of at least two people having the same birthday:",probability)
+
+plt.plot(people, probabilities, marker='o')
+
+plt.xlabel("Number of People")
+plt.ylabel("Probability of Shared Birthday")
+plt.title("Birthday Problem")
+
+plt.grid(True)
+plt.show()
